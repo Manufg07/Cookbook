@@ -8,6 +8,7 @@ import Showrecipie from "./component/Showrecipie"
 import AuthLayout from "./Layout/AuthLayout"
 import MainLayout from "./Layout/MainLayout"
 import NotFoundPage from "./component/NotFoundPage"
+import AddNew from "./component/AddNew"
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -30,6 +31,7 @@ function App() {
       <Route path="/" element={<MainLayout/>}>
           {/* <Route path="/index" element={<Index/>} /> */}
           <Route path="/home" element={<Home/>} />
+          <Route path="/add" element={<AddNew/>} />
           <Route path="/favourites" element={<Favorite/>} />
           <Route path="/showrecipie" element={<Showrecipie/>} />
           <Route path="/*" element={<NotFoundPage/>} />
