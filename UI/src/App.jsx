@@ -9,6 +9,7 @@ import AuthLayout from "./Layout/AuthLayout"
 import MainLayout from "./Layout/MainLayout"
 import NotFoundPage from "./component/NotFoundPage"
 import AddNew from "./component/AddNew"
+// import RecipieDetail, { recipieLoader } from './component/RecipieDetail'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -34,6 +35,8 @@ function App() {
           <Route path="/add" element={<AddNew/>} />
           <Route path="/favourites" element={<Favorite/>} />
           <Route path="/showrecipie" element={<Showrecipie/>} />
+          {/*  <Route path="/recipe/:id" element={<RecipieDetail />} loader={recipieLoader}/> */}
+      {/* </Routes> /> */}
           <Route path="/*" element={<NotFoundPage/>} />
       </Route>
       </>

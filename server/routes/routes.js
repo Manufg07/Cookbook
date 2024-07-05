@@ -27,5 +27,18 @@ router.post("/recipie", async (req, res) => {
       res.status(500).json({ error: 'Failed to fetch recipes' });
     }
   });
+  
+  router.get('/api/recipies/:id', async (req, res) => {
+    try {
+      const recipe = await Recipie.findById(req.params.id);
+      if (!recipe) {
+        return res.status(404).json({ message: 'Recipe not found' });
+      }
+      res.json(recipe);
+    } catch (error) {
+      res.status(500).json({ message: 'Server error', error: error.message });
+    }
+  });
+  
 
 module.exports = router;
